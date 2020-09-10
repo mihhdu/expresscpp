@@ -1,3 +1,33 @@
+### 0.20.0 (2020-06-03)
+
+##### New Features
+
+*  ignore query params for static file serve ([6beccf7a](git@gitlab.com:expresscpp/expresscpp/commit/6beccf7ab45982acf4d37d2b020a6101ec3ba79d))
+
+#### 0.19.3 (2020-05-30)
+
+##### Bug Fixes
+
+*  do not print debug info by default ([f94bfee9](git@gitlab.com:expresscpp/expresscpp/commit/f94bfee96697c27a511e470155c5540e553b726a))
+
+#### 0.19.2 (2020-05-30)
+
+##### Build System / Dependencies
+
+*  also export package.json ([8415afce](git@gitlab.com:expresscpp/expresscpp/commit/8415afce4effae165897206e8aebba1af2e4a077))
+
+#### 0.19.1 (2020-05-30)
+
+##### Build System / Dependencies
+
+*  use package.json for version ([ff5519d3](git@gitlab.com:expresscpp/expresscpp/commit/ff5519d3cd3b98ceb76dfb4d1a6ce120bb43aada))
+
+### 0.19.0 (2020-05-30)
+
+##### Other Changes
+
+* ip for two params after each other ([9764a960](git@gitlab.com:expresscpp/expresscpp/commit/9764a960bb8053f8e63f6d02ae4de16501a14188))
+
 ### 0.18.0 (2020-05-17)
 
 ##### Build System / Dependencies

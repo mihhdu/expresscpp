@@ -3,13 +3,15 @@
 
 from conans import ConanFile, CMake
 import subprocess
-
+import json
 
 class ExpressCpp(ConanFile):
     name = "expresscpp"
     try:
-        result = subprocess.run(['git', 'describe', '--abbrev=0'], stdout=subprocess.PIPE)
-        version = result.stdout.decode('utf-8')
+        with open('package.json') as json_file:
+            data = json.load(json_file)
+            version =  data['version']
+            print(version)
     except:
         version = "0.0.0"
     license = "MIT"
@@ -19,7 +21,7 @@ class ExpressCpp(ConanFile):
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = {"shared": False, "fPIC": True}
     generators = ["cmake", "cmake_find_package", "cmake_paths"]
-    exports_sources = "CMakeLists.txt", "cmake/*", "src/*", "include/*", "conanfile.txt"
+    exports_sources = "CMakeLists.txt", "cmake/*", "src/*", "include/*", "conanfile.txt", "package.json"
 
     def build(self):
         cmake = CMake(self)
